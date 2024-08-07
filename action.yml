@@ -1,6 +1,6 @@
-name: 'Matrix outputs - read'
-description: 'Read outputs for matrix'
-author: hello@cloudposse.com
+name: 'Matrix outputs - read (filtered)'
+description: 'Read outputs for matrix. Patched to filter artifact download.'
+author: codingsloth@pm.me
 branding:
   icon: 'chevrons-down'
   color: 'white'
