@@ -2,7 +2,7 @@
 The original action from cloudposse has a misbehavior where it's utilizing artifacts.  This artifact behavior is downloading *all* workflow artifacts rather than solely the artifact that corresponds to the action, which can then cause the workflow to fail.  This fork exists to fix that behavior.
 
 <!-- markdownlint-disable -->
-# github-action-matrix-outputs-read [![Latest Release](https://img.shields.io/github/release/cloudposse/github-action-matrix-outputs-read.svg)](https://github.com/cloudposse/github-action-matrix-outputs-read/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
+# github-action-matrix-outputs-read [![Latest Release](https://img.shields.io/github/release/GoCodeAlone/github-action-matrix-outputs-read.svg)](https://github.com/GoCodeAlone/github-action-matrix-outputs-read/releases/latest)
 <!-- markdownlint-restore -->
 
 [![README Header][readme_header_img]][readme_header_link]
