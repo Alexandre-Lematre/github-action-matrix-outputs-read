@@ -67,7 +67,7 @@ reference in other jobs.
 
 There is a [workaround](https://github.com/community/community/discussions/17245#discussioncomment-3814009) to address the limitation.
 We implement the workaround with two GitHub Actions:
-* [Matrix Outputs Write](https://github.com/cloudposse/github-action-matrix-outputs-write)
+* [Matrix Outputs Write](https://github.com/GoCodeAlone/github-action-matrix-outputs-write)
 * [Matrix Outputs Read](https://github.com/GoCodeAlone/github-action-matrix-outputs-read@v1)
 
 ## v1 - What's new
@@ -76,7 +76,7 @@ We implement the workaround with two GitHub Actions:
 > GoCodeAlone/github-action-matrix-outputs-read@v1@v1+ is not currently supported on GHES yet. If you are on GHES, you 
 > must use [v0](https://github.com/cloudposse/github-action-matrix-outputs-read/releases/tag/0.1.2).
 
-The release of `cloudposse/github-action-matrix-outputs-write@v1` and `GoCodeAlone/github-action-matrix-outputs-read@v1@v1` 
+The release of `GoCodeAlone/github-action-matrix-outputs-write@v1` and `GoCodeAlone/github-action-matrix-outputs-read@v1@v1` 
 are major changes to the backend architecture of Artifacts. They have numerous performance and behavioral improvements.
 
 For more information, see the [`@actions/artifact`](https://github.com/actions/toolkit/tree/main/packages/artifact) documentation.
@@ -124,7 +124,7 @@ Example how you can use workaround to reference matrix job outputs.
               PLATFORM=${{ matrix.platform }}
 
         ## Write for matrix outputs workaround 
-        - uses: cloudposse/github-action-matrix-outputs-write@v1
+        - uses: GoCodeAlone/github-action-matrix-outputs-write@v1
           id: out
           with:
             matrix-step-name: ${{ github.job }}
@@ -221,7 +221,7 @@ jobs:
     needs: [build]
     steps:        
       ## Write for matrix outputs workaround 
-      - uses: cloudposse/github-action-matrix-outputs-write@v1
+      - uses: GoCodeAlone/github-action-matrix-outputs-write@v1
         id: out
         with:
           matrix-step-name: ${{ inputs.matrix-step-name }}
@@ -352,7 +352,7 @@ Are you using this project or any of our other projects? Consider [leaving a tes
 
 Check out these related projects.
 
-- [github-action-matrix-outputs-write](https://github.com/cloudposse/github-action-matrix-outputs-write) - Matrix outputs write
+- [github-action-matrix-outputs-write](https://github.com/GoCodeAlone/github-action-matrix-outputs-write) - Matrix outputs write
 
 
 ## References
