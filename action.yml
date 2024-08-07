@@ -22,6 +22,8 @@ runs:
         force: 'true'
 
     - uses: actions/download-artifact@v4
+      with:
+        name: ${{ inputs.matrix-step-name }}
 
     - id: context
       shell: bash
