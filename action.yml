@@ -28,5 +28,5 @@ runs:
     - id: context
       shell: bash
       run: |
-        result="$(find . -maxdepth 2 -name "${{ inputs.matrix-step-name }}-*" -exec cat {} \; | jq -c --slurp 'map(to_entries | map(.key as $matrix_key | .value | map_values({($matrix_key): .}))) | flatten | reduce .[] as $item ({}; . * $item)' )"
+        result="$(find . -maxdepth 2 -type f -name "${{ inputs.matrix-step-name }}-*" -exec cat {} \; | jq -c --slurp 'map(to_entries | map(.key as $matrix_key | .value | map_values({($matrix_key): .}))) | flatten | reduce .[] as $item ({}; . * $item)' )"
         echo "result=${result}" >> $GITHUB_OUTPUT
